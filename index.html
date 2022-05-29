@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login_zone">
+      <div class="inputs">
+        <h1 class="login_title">Login</h1>
+        <input class="input_name input" type="text" placeholder="User Name" />
+        <div class="input_icon">
+          <input
+            class="input_pas input"
+            type="password"
+            placeholder="Password"
+          />
+          <span
+            ><ion-icon class="closeEye icon1" name="eye-off-outline"></ion-icon
+          ></span>
+          <span
+            ><ion-icon class="openEye icon2" name="eye-outline"></ion-icon
+          ></span>
+        </div>
+        <button class="btn_login">Login</button>
+        <button class="btn_register">Register</button>
+      </div>
+    </div>
+    <div class="register_zone">
+      <h1 class="login_title">Sing Up</h1>
+      <input class="input reg_user" type="text" placeholder="User name" />
+      <input class="input" type="number" placeholder="Phone number" />
+      <div class="input_icon">
+        <input class="input reg_pas1" type="password" placeholder="Password" />
+        <span
+          ><ion-icon class="closeReg icon1" name="eye-off-outline"></ion-icon
+        ></span>
+        <span
+          ><ion-icon class="openReg icon2" name="eye-outline"></ion-icon
+        ></span>
+      </div>
+      <input
+        class="input reg_pas2"
+        type="password"
+        placeholder="Confirm password"
+      />
+
+      <button class="btn-register">Register</button>
+    </div>
+    <div class="player"></div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
