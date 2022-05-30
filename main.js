@@ -13,15 +13,18 @@ const regUser = document.querySelector(".reg_user");
 const registerZone = document.querySelector(".register_zone");
 const btnRegister = document.querySelector(".btn_register");
 const register = document.querySelector(".btn-register");
+const reg_num = document.querySelector(".reg_number");
 
 const playe = document.querySelector(".player");
 
 let textName = "";
 let textPas = "";
 let regName = "";
+let regNum = "";
 
 let nameRegister = "";
 let passwordRegister = "";
+let numberRegister = "";
 
 let reg_pas1 = "";
 let reg_pas2 = "";
@@ -49,6 +52,9 @@ regPas1.addEventListener("keyup", (e) => {
 regPas2.addEventListener("keyup", (e) => {
   reg_pas2 = e.target.value;
 });
+reg_num.addEventListener("keyup", (e) => {
+  regNum = e.target.value;
+});
 
 regUser.addEventListener("keyup", (e) => {
   regName = e.target.value;
@@ -58,15 +64,13 @@ register.addEventListener("click", () => {
   if (reg_pas1 == reg_pas2 && reg_pas1.length >= 8 && reg_pas2.length >= 8) {
     localStorage.setItem("name", regName);
     localStorage.setItem("pas", reg_pas1);
+    localStorage.setItem("number", regNum);
     registerZone.style.display = "none";
     loginZone.style.display = "flex";
   } else {
     alert("passwordi boshqattan kiriting");
   }
 });
-
-titleName.innerText = localStorage.getItem("name");
-titlePas.innerText = localStorage.getItem("pas");
 
 function openPas() {
   eyeOpen.style.display = "none";
@@ -89,8 +93,14 @@ function closePas() {
 function btnLogin() {
   nameRegister = localStorage.getItem("name");
   passwordRegister = localStorage.getItem("pas");
-  if (textName == nameRegister && textPas == passwordRegister) {
+  numberRegister = localStorage.getItem("number");
+  if (
+    (textName == nameRegister || textName == numberRegister) &&
+    textPas == passwordRegister
+  ) {
     loginZone.style.display = "none";
     playe.style.display = "block";
+  } else {
+    alert("notogri login kiritildi");
   }
 }
