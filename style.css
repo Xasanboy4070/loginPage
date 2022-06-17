@@ -90,6 +90,10 @@ body {
   background-color: blue;
   color: white;
 }
+.btn_register:hover {
+  background-color: rgb(2, 2, 197);
+  transition: 1s;
+}
 .input_icon {
   display: flex;
   align-items: center;
